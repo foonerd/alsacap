@@ -3,7 +3,7 @@
 echo "Creating Volumio alsacap debfile"
 
 sudo apt-get update
-sudo apt-get install -y autotools-dev automake libasound2-dev build-essential dpkg-dev file 
+sudo apt-get install -y autotools-dev automake libasound2-dev build-essential dpkg-dev file checkinstall libaudio2
 
 # Now checkinstall shall be installed. on arm simply do 
 # apt-get install checkinstall
@@ -17,9 +17,9 @@ make
 make dist
 
 mkdir distfolder
-tar xf alsacap-1.0.tar.gz -C distfolder
+tar xf alsacap-1.4.tar.gz -C distfolder
 
-cd distfolder/alsacap-1.0/
+cd distfolder/alsacap-1.4/
 
 ./configure
 make
