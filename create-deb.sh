@@ -3,7 +3,7 @@
 echo "Creating Volumio alsacap debfile"
 
 sudo apt-get update
-sudo apt-get install -y autotools-dev automake libasound2-dev build-essential dpkg-dev file 
+sudo apt-get install -y autotools-dev automake libasound2-dev build-essential dpkg-dev file checkinstall
 
 # Now checkinstall shall be installed. on arm simply do 
 # apt-get install checkinstall
