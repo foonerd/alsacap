@@ -33,7 +33,7 @@
 #include <alsa/asoundlib.h>
 #include <errno.h>
 #include <string.h>
-
+#include <ctype.h>
 
 /*============================================================================
          Constant and type definitions
