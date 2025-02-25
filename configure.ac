@@ -1,4 +1,4 @@
-AC_INIT(alsacap, 1.0)
+AC_INIT(alsacap, 1.3)
 AM_INIT_AUTOMAKE
 
 # Set the CC command.
