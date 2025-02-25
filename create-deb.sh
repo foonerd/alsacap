@@ -17,9 +17,9 @@ make
 make dist
 
 mkdir distfolder
-tar xf alsacap-1.0.tar.gz -C distfolder
+tar xf alsacap-1.4.tar.gz -C distfolder
 
-cd distfolder/alsacap-1.0/
+cd distfolder/alsacap-1.4/
 
 ./configure
 make
