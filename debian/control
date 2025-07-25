@@ -1,0 +1,15 @@
+Source: alsacap
+Section: sound
+Priority: optional
+Maintainer: Data Technics IT Limited <admin@dt-ltd.net>
+Build-Depends: debhelper-compat (= 12), libasound2-dev
+Standards-Version: 4.5.0
+Homepage: https://www.alsa-project.org/
+
+Package: alsacap
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ALSA capabilities reporting tool
+ A diagnostic tool for listing supported audio capture and playback formats
+ on ALSA-compatible sound devices. Useful for debugging audio configurations
+ and evaluating hardware capabilities.

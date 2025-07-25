@@ -1,0 +1,19 @@
+FROM debian:bookworm
+
+RUN dpkg --add-architecture arm64 && apt-get update && apt-get install -y \
+  crossbuild-essential-arm64 \
+  autotools-dev \
+  autoconf \
+  automake \
+  libtool \
+  libasound2-dev:arm64 \
+  devscripts \
+  fakeroot \
+  debhelper \
+  lintian \
+  && rm -rf /var/lib/apt/lists/*
+
+ENV DEB_BUILD_OPTIONS=nocheck
+ENV DEB_CROSS=yes
+
+WORKDIR /build

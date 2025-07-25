@@ -416,6 +416,7 @@ void testconfig(snd_pcm_stream_t stream, const char *device, const int *hwpars)
     switch(hwpars[count])
     {
       case HWP_RATE:param= hwpars[count+1];
+                dir= 0;   // default direction is "exactly this rate"
                 err= snd_pcm_hw_params_set_rate_near(pcm, pars, &param, &result);
                 if( err<0 )
             fprintf(stderr, "Could not set sampling rate to %d Hz: %s.  "
@@ -634,5 +635,3 @@ void printfmtmask(const snd_pcm_format_mask_t *fmask)
   if( !prevformat )
     printf("(none)");
 }
-
-

@@ -1,0 +1,6 @@
+2025-07-25  foonerd
+
+	* Released version 1.4-2
+	* Added multi-architecture build support (amd64, armv6, armhf, arm64)
+	* Integrated Debian packaging and Docker-based toolchain
+	* Ensured compatibility with ALSA 1.2+ headers

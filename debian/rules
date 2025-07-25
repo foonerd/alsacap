@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	./bootstrap && ./configure --host=$(DEB_HOST_GNU_TYPE) --prefix=/usr
+
+override_dh_auto_build:
+	make
