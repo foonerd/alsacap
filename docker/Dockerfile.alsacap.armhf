@@ -1,0 +1,19 @@
+FROM debian:bookworm
+
+RUN dpkg --add-architecture armhf && apt-get update && apt-get install -y \
+  crossbuild-essential-armhf \
+  autotools-dev \
+  autoconf \
+  automake \
+  libtool \
+  libasound2-dev:armhf \
+  devscripts \
+  fakeroot \
+  debhelper \
+  lintian \
+  && rm -rf /var/lib/apt/lists/*
+
+ENV DEB_BUILD_OPTIONS=nocheck
+ENV DEB_CROSS=yes
+
+WORKDIR /build

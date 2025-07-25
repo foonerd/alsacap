@@ -1,0 +1,16 @@
+FROM debian:bookworm
+
+RUN apt-get update && apt-get install -y \
+  build-essential \
+  autotools-dev \
+  autoconf \
+  automake \
+  libtool \
+  libasound2-dev \
+  devscripts \
+  fakeroot \
+  debhelper \
+  lintian \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /build
