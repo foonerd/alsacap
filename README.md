@@ -3,7 +3,9 @@ written by Volker Schatz and reports the audio capabilities of ALSA devices.
 
 Example output:
 
-$ alsacap
+`$ alsacap`
+
+```
 *** Scanning for playback devices ***
 Card 0, ID `ICH5', name `Intel ICH5'
   Device 0, ID `Intel ICH', name `Intel ICH5', 1 subdevices (1 available)
@@ -21,7 +23,7 @@ Card 0, ID `ICH5', name `Intel ICH5'
     Period size range from 8 to 16384
 
       Subdevice 0, name `subdevice #0'
-
+```
 
 ==== Notes about the package ====
 
@@ -33,15 +35,18 @@ This is a standard autotools package. You need:
 
 To build manually:
 
+```
   ./bootstrap
   ./configure
   make
   make install
+```
 
 To generate a distribution tarball:
 
+```
   make dist
-
+```
 ### Build .deb packages across architectures using Docker
 
 #### Overriding Compiler Flags
